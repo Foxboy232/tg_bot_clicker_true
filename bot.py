@@ -16,4 +16,4 @@ def start(message):
     bot.send_message(message.chat.id, 'Привет, {0.first_name}!'.format(message.from_user), reply_markup=markup)
 
 
-bot.polling(none_stop=True)
+bot.infinity_polling()
