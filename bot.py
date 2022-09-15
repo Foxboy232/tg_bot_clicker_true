@@ -58,7 +58,8 @@ def bot_message(message):
                 bot.send_message(message.chat.id, 'Вам выпала: ' + str('Решка'))
         elif message.text == 'Потревожить автора':
             bot.send_message(message.chat.id, 'Автор показывает код, не мешать!')
-        elif message.text == 'Поставите 10?':
+        elif message.text == 'Поставьте 10':
+            bot.send_message(message.chat.id, 'Поставите 10?')
             item1 = types.KeyboardButton('Да')
             item0 = types.KeyboardButton('Нет')
             markup.add(item0, item1)
