@@ -46,7 +46,19 @@ def bot_message(message):
             bot.send_message(message.chat.id, f'{password}')
             password = ''
         elif message.text == 'Реклама':
-            bot.send_message(message.chat.id, 'У автора закончился бюджет на рекламу')
+            rando = random.randint(0, 5)
+            if rando == 0:
+                bot.send_message(message.chat.id, 'Хеден шолдерс! Лучший шампунь от головы!')
+            elif rando == 1:
+                bot.send_message(message.chat.id, 'Корега 9 из 10 стоматологов рекомендуют эту зубную пасту')
+            elif rando == 2:
+                bot.send_message(message.chat.id, 'Джо Джо! Лучшее аниме века')
+            elif rando == 3:
+                bot.send_message(message.chat.id, 'Весь мир Джо Джо референс!')
+            elif rando == 4:
+                bot.send_message(message.chat.id, 'Капуста! 9 из 10 фермеров ставят лайк!')
+            elif rando == 5:
+                bot.send_message(message.chat.id, 'Кроссаут, это онлайн шутер где ты можешь собрать машину из говна')
         elif message.text == '???':
             bot.send_message(message.chat.id, '???')
         elif message.text == 'Орёл - решка':
