@@ -20,7 +20,7 @@ def start(message):
     item2 = types.KeyboardButton('???')
     item3 = types.KeyboardButton('Кликнуть')
     item4 = types.KeyboardButton('Реклама')
-    item5 = types.KeyboardButton('Баланс')
+    item5 = types.KeyboardButton('Количество кликов')
     item6 = types.KeyboardButton('Рандомное число')
     item7 = types.KeyboardButton('Сгенерировать пароль (10 символов)')
     item8 = types.KeyboardButton('Потревожить автора')
@@ -40,8 +40,8 @@ def bot_message(message):
         elif message.text == 'Кликнуть':
             kiwi += 1
             bot.send_message(message.chat.id, '+1')
-        elif message.text == 'Баланс':
-            bot.send_message(message.chat.id, f'у тебя: {kiwi}')
+        elif message.text == 'Количество кликов':
+            bot.send_message(message.chat.id, f'у бота: {kiwi} кликов')
         elif message.text == 'Сгенерировать пароль (10 символов)':
             generate_password()
             bot.send_message(message.chat.id, f'{password}')
