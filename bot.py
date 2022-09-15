@@ -24,9 +24,8 @@ def start(message):
     item6 = types.KeyboardButton('Рандомное число')
     item7 = types.KeyboardButton('Сгенерировать пароль (10 символов)')
     item8 = types.KeyboardButton('Потревожить автора')
-    item9 = types.KeyboardButton('Поставьте 10')
 
-    markup.add(item3, item5, item4, item6, item8, item7, item9, item1, item2)
+    markup.add(item3, item5, item4, item6, item8, item7, item1, item2)
 
     bot.send_message(message.chat.id, 'Привет, {0.first_name}!'.format(message.from_user), reply_markup=markup)
 
@@ -58,24 +57,6 @@ def bot_message(message):
                 bot.send_message(message.chat.id, 'Вам выпала: ' + str('Решка'))
         elif message.text == 'Потревожить автора':
             bot.send_message(message.chat.id, 'Автор показывает код, не мешать!')
-        elif message.text == 'Поставьте 10':
-            bot.send_message(message.chat.id, 'Поставите 10?')
-            item1 = types.KeyboardButton('Да')
-            item0 = types.KeyboardButton('Нет')
-            markup.add(item0, item1)
-        elif message.text == 'Да':
-            bot.send_message(message.chat.id, 'Спасибо большое!!!')
-        elif message.text == 'Нет':
-            item2 = types.KeyboardButton('Уверен!')
-            item3 = types.KeyboardButton('Неть')
-            markup.add(item2, item3)
-            bot.send_message(message.chat.id, 'Вы уверены?')
-        elif message.text == 'Неть':
-            item1 = types.KeyboardButton('Да')
-            item0 = types.KeyboardButton('Нет')
-            markup.add(item0, item1)
-        elif message.text == 'Уверен':
-            bot.send_message(message.chat.id, 'А может вас пырнуть?')
 
 
 if __name__ == '__main__':
